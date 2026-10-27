@@ -22,15 +22,14 @@ search.addEventListener('click',()=>{
             
         })
         .then(data=>{
-            console.log(data);
-            console.log(data.main.temp);
             
             weather.innerHTML=`
                 <div class="card shadow border-0 rounded-4 p-4 w-50 mx-auto">
                     <h4>${data.name}</h4>
-                    <h2 class="text-danger">${data.main.temp}°C</h2>
+                    <h2 class="text-danger">${data.main.temp} °C</h2>
                     <h4 class="text-success">${data.weather[0].description}  </h4>
-                    <h4>wind speed: ${data.wind.speed}m/s</h4>
+                    <h4 class="text-success">Humidity: ${data.main.humidity} % </h4>
+                    <h4>wind speed: ${data.wind.speed} m/s</h4>
                 </div>
             `
             
